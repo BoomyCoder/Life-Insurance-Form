@@ -73,6 +73,10 @@ body{
 .hero-title {
   color: #ffffff !important;
 }
+.hero-subtitle {
+  color: #ffffff !important;
+}
+
 
 .hero-subtitle{ margin-top: .75rem; color: var(--text-dim) }
 .hero-cta{ margin-top: 1.5rem; display:flex; gap:.8rem; flex-wrap:wrap }
@@ -176,7 +180,12 @@ input:focus, textarea:focus{ outline:2px solid color-mix(in srgb, var(--accent),
   border:1px solid transparent; padding:.7rem 1rem; border-radius: 999px; font-weight:700
 }
 .btn:hover{ filter:brightness(.95) }
-.btn-outline{ background: transparent; color: var(--text); border-color: var(--border) }
+.btn-outline {
+  background: transparent;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
 .btn-sm{ padding:.45rem .75rem; font-weight:700 }
 .checklist{ margin-top:.8rem; display:grid; gap:.35rem; color:var(--text-dim) }
 .stack{ list-style:none; display:grid; gap:.25rem; margin-top:.6rem }
