@@ -250,18 +250,3 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
   transform: translateY(20px);
 }
-
-
-
-/* Hide when not needed (JS toggles this) */
-#cta-fab.hidden { opacity: 0; pointer-events: none; transform: translateY(20px); }
-
-/* Optional: smaller on very small screens */
-@media (max-width: 420px) {
-  #cta-fab { padding: 12px 16px; font-size: 15px; right: 14px; }
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  #cta-fab { transition: none; }
-}
