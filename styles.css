@@ -214,39 +214,39 @@ input:focus, textarea:focus{ outline:2px solid color-mix(in srgb, var(--accent),
 #services .consent input{ margin-top:.2rem }
 .visually-hidden{ position:absolute !important; left:-9999px !important; }
 
+
+
+
+/* Smooth scroll for anchor links */
+html { scroll-behavior: smooth; }
+
 /* Floating CTA Button */
 #cta-fab {
   position: fixed;
   right: 20px;
-  bottom: calc(20px + env(safe-area-inset-bottom)); /* iOS safe area */
+  bottom: calc(20px + env(safe-area-inset-bottom));
   z-index: 1000;
-  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
   padding: 14px 20px;
   font-weight: 700;
   font-size: 16px;
   color: #fff;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
+  text-decoration: none;
   box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-  cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
 }
 
-#cta-fab:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.28); }
-#cta-fab:active { transform: translateY(0); }
-#cta-fab:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
-
-/* Hide when not needed (JS toggles this) */
-#cta-fab.hidden { opacity: 0; pointer-events: none; transform: translateY(20px); }
-
-/* Optional: smaller on very small screens */
-@media (max-width: 420px) {
-  #cta-fab { padding: 12px 16px; font-size: 15px; right: 14px; }
+#cta-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.28);
 }
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  #cta-fab { transition: none; }
+#cta-fab.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
 }
-
-
