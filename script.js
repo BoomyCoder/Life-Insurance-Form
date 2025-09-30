@@ -38,3 +38,32 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // IMPORTANT: No submit handler here.
 // Let the browser POST the form to FormSubmit, which will handle _next redirect.
+
+
+// Floating CTA -> smooth scroll to the form
+(function () {
+  const fab = document.getElementById('cta-fab');
+  const form = document.getElementById('quote-form');
+  if (!fab || !form) return;
+
+  // Click → smooth scroll
+  fab.addEventListener('click', () => {
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Hide the button when the form is on screen
+  const io = new IntersectionObserver(
+    (entries) => {
+      const isVisible = entries[0].isIntersecting;
+      if (isVisible) fab.classList.add('hidden');
+      else fab.classList.remove('hidden');
+    },
+    { root: null, threshold: 0.15 }
+  );
+  io.observe(form);
+
+  // Optional: show after page starts (avoid covering hero CTA)
+  // fab.classList.add('hidden');
+  // setTimeout(() => fab.classList.remove('hidden'), 500);
+})();
+
