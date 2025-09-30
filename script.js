@@ -1,8 +1,10 @@
-// Prevent auto-scrolling on page load if URL has a hash
-if (window.location.hash) {
-  window.scrollTo(0, 0);
-  history.replaceState(null, null, ' ');
+// Stop browser from auto-scrolling to anchors on load
+if (window.location.hash === "#quote-form") {
+  window.scrollTo(0, 0); // reset scroll to top
+  // remove the hash so future reloads don't jump
+  history.replaceState(null, null, window.location.pathname);
 }
+
 
 
 
