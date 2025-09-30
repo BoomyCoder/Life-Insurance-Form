@@ -250,3 +250,32 @@ html { scroll-behavior: smooth; }
   pointer-events: none;
   transform: translateY(20px);
 }
+
+
+
+
+/* ===== Mission Statement Styling ===== */
+.mission-box {
+  background: linear-gradient(180deg, rgba(125,211,252,0.05), rgba(125,211,252,0.02));
+  border: 1px solid color-mix(in srgb, var(--accent), transparent 70%);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.mission-box h3 {
+  font-size: var(--h2);
+  margin-bottom: .75rem;
+  color: var(--accent);
+}
+
+.mission-box ul {
+  margin: 1rem 0 1rem 1.25rem;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.mission-box li {
+  margin-bottom: .4rem;
+}
+
