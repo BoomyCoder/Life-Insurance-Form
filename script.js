@@ -1,3 +1,11 @@
+// Prevent auto-scrolling on page load if URL has a hash
+if (window.location.hash) {
+  window.scrollTo(0, 0);
+  history.replaceState(null, null, ' ');
+}
+
+
+
 // ===== Mobile navigation toggle =====
 const toggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('site-nav');
